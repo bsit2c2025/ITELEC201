@@ -1,0 +1,93 @@
+300 width
+
+600 height
+
+html 5
+
+24 frames
+
+
+library
+
+properties
+
+color of stage
+
+assets
+oval tool
+properties
+color 
+stroke ay wala
+top right of colors
+
+ASSET MAKING : 
+1.) Pera!
+2.) Button with Play
+3.) You Lose!
+4.) You Win!
+
+copy paste another bilog
+
+ilagay maliit bilog sa Malaki bilog
+
+
+
+static text
+
+number 1, ilagay sa gitna 
+
+selection tool, select 3, align, vertical center, horizontal center
+
+Highlight 3, go to modify, convert to symbol, type movie clip, registration ay middle, Name = Pera
+
+Linkage sa pera, my pera
+
+Rectangle as white backgroun then Lagay Text, Play, align center
+
+delete play
+
+text, color red, type you lose!
+
+text, color green, type you win!
+
+TIMELINE
+
+frame 1, right click tapos actions. 
+
+JavaScript 
+
+stage.enableMouseOver()
+const myPera = [];
+
+let score = 0;
+
+let numOfCoins = 10;
+let coinSpeed = 10;
+
+let btnPlay = new lib.btnPlay();
+stage.addChild(btnPlay)
+btnPlay.x = 150;
+btnPlay.y = 300;
+
+btnPlay.addEventListener("click",startGame)
+
+function startGame () {
+	txtLoser.visible=false;
+	txtWinner.visibile=false;
+	btnPlay.visible=false;
+	generateCoin ();
+	addCoinListener ();
+	stage.addEventListener ("tick",moveCoins);
+
+}
+
+LIBRARY
+
+Name	|	Linkage
+Pera	|	myPera
+Play	|	btnPlay
+You Lose!	loser
+You win!|	winner
+
+
+
